@@ -14,43 +14,37 @@ public class TexasHoldEmApp {
 		Deck spades = new Deck();
 		Deck clubs = new Deck();
 
-		int randomCard = 0;
+		//select random suit and card for dealing
 		for(int i = 0;i < 4;++i){
-			//select random suit for dealing
 			int randomDeck = rand.nextInt(4);
-
-			//select random card for dealing
-			for(int j = 5;i > 0; --j){		
-				 randomCard = rand.nextInt(12);//number of elements in card array
-				if(randomCard == 0){
-					randomCard = rand.nextInt(12);
+			int randomCard = rand.nextInt(13);
+			if(randomDeck == 0){
+				if(diamonds.cards[randomCard] = true){				//duplicate check
+					randomCard = rand.nextInt(13);
 				}
-			}
-
-
-
-
-			//Array to face
-			if(randomCard == 11){
-				System.out.print("J");
+				diamonds.cards[randomCard] = true;
 			}else{
-				if(randomCard ==12){
-					System.out.print("Q");
+				if(randomDeck == 1){
+					if(hearts.cards[randomCard] = true){				//duplicate check
+						randomCard = rand.nextInt(13);
+					}
+					hearts.cards[randomCard] = true;
 				}else{
-					if(randomCard==13){
-						System.out.print("K");
+					if(randomDeck == 2){
+						if(spades.cards[randomCard] = true){				//duplicate check
+							randomCard = rand.nextInt(13);
+						}
+						spades.cards[randomCard] = true;
 					}else{
-						if(randomCard==14){
-							System.out.print("A");
-						}else{
-							System.out.print(randomCard);
+						if(randomDeck == 3){
+							if(clubs.cards[randomCard] = true){				//duplicate check
+								randomCard = rand.nextInt(13);
+							}
+							clubs.cards[randomCard] = true;
 						}
 					}
 				}
 			}
-
-
-
 
 
 		}
