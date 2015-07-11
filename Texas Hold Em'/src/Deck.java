@@ -24,8 +24,8 @@ public class Deck {
 //	12 = K
 	boolean[] cards = new boolean[13];
 	//dealers cards
-	int[] dealerCards = new int[4];
-	
+	//element numbers (0-3) represent D,H,S,C
+	boolean[] dealerCards = new boolean[13];
 	
 
 	
