@@ -24,7 +24,22 @@ public class EircodeApp {
 		String eircodeInput = scan.nextLine();
 		System.out.println(eircodeInput);
 		
+		int elementFound = -1;
 		
+		for(int i = 0; i < eircode.length; i++){
+			
+			if(eircodeInput.equals(eircode[i])){
+				
+				elementFound = i;
+				break;
+			}
+		}
+		
+		if(elementFound == -1){
+			System.out.println("Sorry, eircode not found.");
+		}else{
+			System.out.println(addresses[elementFound]);
+		}
 		
 		
 		
@@ -33,4 +48,3 @@ public class EircodeApp {
 	}
 
 }
-
