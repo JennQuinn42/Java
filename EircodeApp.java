@@ -36,9 +36,10 @@ public class EircodeApp {
 		}
 		
 		//Check if eircode is too small
-		if(eircodeInput.length() < 7){
+		if(eircodeInput.length() < 7 || eircodeInput.length() > 8){
 			System.out.println(eircodeInput + " is not a valid eircode.");
 		}else{
+			
 			int elementFound = -1;
 
 			//check if eircode is in our []
